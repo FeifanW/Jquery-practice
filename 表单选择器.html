@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>层次选择器</title>
+  </head>
+  <body>
+    <div id="parent">
+      <div id="app">id选择器<span>span中的内容</span></div>
+      <div id="hello" class="blue"><div>元素选择器</div></div>
+      <span class="blue">样式选择器</span>
+      <input type="checkbox" value="代码"/>
+      <input type="checkbox" value="篮球"/>
+      <input type="checkbox" value="喝水"/>
+      <textarea></textarea>
+      <button>提交</button>
+    </div>
+  </body>
+  <script src="jquery-3.6.1.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript">
+      // 表单选择器
+      var input1 = $(":input")
+      console.log(input1)
+      // 元素选择器
+      var input2 = $("input")
+      console.log(input2)
+  </script>
+</html>

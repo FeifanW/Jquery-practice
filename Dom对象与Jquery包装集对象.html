@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>使用</title>
+  </head>
+  <body>
+    <div id="mydiv">文本</div>
+  </body>
+  <script src="jquery-3.6.1.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript">
+    // DOM对象
+    var divDom = document.getElementById("mydiv");
+    console.log(divDom)
+    var domList = document.getElementsByTagName("div")
+    console.log(domList)
+    // 获取不存在的元素
+    var domTest = document.getElementsByTagName("span")
+    console.log(domTest)
+    var idTest = document.getElementById("span")
+    console.log(idTest)
+    // Jquery对象
+    var divJquery = $("#mydiv")
+    console.log(divJquery)
+    var spanJquery = $("#myspan")
+    console.log(spanJquery)
+
+    console.log("---------------")
+    // jquery对象转Dom对象
+    var divDomToJquery = $(divDom)
+    console.log(divDomToJquery)
+
+    // jquery转Dom对象
+    // 只需要取数组中的元素即可
+    var divJqueryToDom = divJquery[0]
+    console.log(divJqueryToDom)
+
+  </script>
+</html>
