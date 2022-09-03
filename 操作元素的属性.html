@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div id="parent">
+      <div id="app">id选择器<span>span中的内容</span></div>
+      <div id="hello" class="blue"><div>元素选择器</div></div>
+      <span class="blue">样式选择器</span>
+      <input type="checkbox" id="aa" value="代码" abc="123" checked="checked"/>
+<!--      <input type="checked" id="aa" value="代码" abc="123"/>-->
+      <input type="checkbox" id="bb" value="篮球"/>
+      <input type="checkbox" value="喝水"/>
+      <textarea></textarea>
+      <button>提交</button>
+    </div>
+  </body>
+  <script src="jquery-3.6.1.js" type="text/javascript" charset="utf-8"></script>
+</html>
+<script type="text/javascript">
+  // 获取属性
+  // 固有属性
+  var name = $("#aa").attr("value")
+  console.log(name)
+  var name2 = $("#aa").prop("value")
+  console.log(name2)
+
+  var ck1 = $("#aa").attr("abc");
+  var ck2 = $("#aa").prop("abc");
+  console.log(ck1)
+  console.log(ck2)
+
+  var ck3 = $("#aa").attr("checked");
+  var ck4 = $("#aa").prop("checked");
+  console.log(ck3)
+  console.log(ck4)
+
+  // 设置属性
+  $("#aa").attr("test","1")
+  $("#bb").prop("test","2")
+
+  $("#bb").attr("checked","checked")
+  $("#bb").prop("checked",false)
+
+  // 移除属性
+  $("#aa").removeAttr("test")
+
+  // 总结：属性类型是boolean（checked、selected、disabled）使用prop否则使用attr
+
+</script>

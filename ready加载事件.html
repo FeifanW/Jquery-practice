@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+      .bb{
+        background: skyblue;
+        width: 10px;
+        height: 10px;
+        margin: 15px;
+        padding: 5px;
+      }
+    </style>
+    <script src="jquery-3.6.1.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+      console.log($("#p1"))
+      $(document).ready(function (){
+        console.log($("#p1"))
+      })
+      $(function (){
+        console.log("ready加载事件")
+      })
+    </script>
+  </head>
+
+  <body>
+    <p id="p1">文本</p>
+  </body>
+</html>

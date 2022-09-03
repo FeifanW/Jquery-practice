@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+      .bb{
+        background: skyblue;
+        width: 10px;
+        height: 10px;
+        margin: 15px;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <span class="aa">演员</span>
+    <span class="aa">电影</span>
+    <span class="bb">歌手</span>
+    <div class="content">
+      <span>五月天</span>
+    </div>
+  </body>
+  <script src="jquery-3.6.1.js" type="text/javascript" charset="utf-8"></script>
+</html>
+<script type="text/javascript">
+  // $(".aa").remove()
+  // $(".bb").empty()
+
+  $('.aa').each(function (index,item){
+    console.log(index)
+    console.log(item)
+    console.log(this)
+  })
+</script>

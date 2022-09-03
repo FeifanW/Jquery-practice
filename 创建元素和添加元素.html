@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+    </style>
+  </head>
+  <body>
+    <span class="aa">演员</span>
+    <span class="bb">歌手</span>
+    <div class="content">
+      <span>五月天</span>
+    </div>
+  </body>
+  <script src="jquery-3.6.1.js" type="text/javascript" charset="utf-8"></script>
+</html>
+<script type="text/javascript">
+  // 创建元素
+  var p = "<p>这是一个p标签</p>"
+  console.log(p)
+  console.log($(p))
+
+  var span = "<span>周杰伦</span>"
+  $(".content").prepend(span)
+  var span2 = "<span>刘若英</span>"
+  $(span2).prependTo($(".content"))
+
+  var span3 = "<span>陈绮贞</span>"
+  var span4 = "<span>李宗盛</span>"
+  $(".content").append(span3)
+  $(span4).appendTo($(".content"))
+
+  $(".aa").append($(".content"))
+
+  // 同级追加
+  var sp1 = "<span>李荣浩</span>"
+  var sp2 = "<span>薛之谦</span>"
+  $(".bb").before(sp1)
+  $(".bb").after(sp2)
+
+</script>
