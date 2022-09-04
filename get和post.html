@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+      body{
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+  </body>
+  <script src="jquery-3.6.1.js" type="text/javascript" charset="utf-8"></script>
+</html>
+<script type="text/javascript">
+  $.get("./data.json",{},function (data){
+    console.log(data)
+  })
+  $.post("./data.json",{},function (data){
+    console.log(data)
+  })
+
+  // getJSON :返回的数据格式满足JSON格式
+  $.getJSON("./data.txt",{},function (data){
+    console.log(data)
+  })
+
+</script>

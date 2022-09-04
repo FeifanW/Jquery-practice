@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+      body{
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+  </body>
+  <script src="jquery-3.6.1.js" type="text/javascript" charset="utf-8"></script>
+</html>
+<script type="text/javascript">
+  $.ajax({
+    type:"get",   // 请求方式
+    url:'./data.txt',   // 请求地址
+    data:{
+      name:'zhangsan'
+    },
+    dataType:"json",
+    success:function (data){
+      var ul = $("<ul></ul>")
+      var li = "<li>"+ data.name +"</li>"
+      ul.append(li)
+      // 将ul设置到body标签中
+      $("body").append(ul)
+    }
+  })
+
+</script>
